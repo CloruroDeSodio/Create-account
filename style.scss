@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+header{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: black;
+color: white;
+box-shadow: .1vh .1vh 3vh rgb(15, 13, 13);
+padding: 3vh;
+border-radius: .9vh;
+            .title-h1{
+                    font-size: 10vh;
+                    text-shadow: .1vh .1vh 3vh white;
+                    }
+}
+
+
+
+
+.form{
+        display: flex;
+        background-color: rgb(37, 35, 35);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+                                    h2{
+                                        font-size: 3.5vh;
+                                        margin: 2rem;
+                                        padding: .5rem;
+                                        background: rgb(2,0,36);
+                                        color: white;
+                                        text-decoration: underline;
+                                        border: 1px solid white;
+                                                    animation: h2anim 5s forwards;
+                                                                    @keyframes h2anim {
+                                                                        50%{
+                                                                            background-color: black;
+                                                                            text-shadow: 1px 1px 20px white;
+                                                                    }
+                                                                                }
+                                }
+
+                @mixin tamañoInput {
+                    font-size: 2.5vh;
+                    margin: 4vh;
+                    padding: 1.9vh;
+                    border-radius: 1.9vh;
+                    border-style: none;
+                    background-color: black;
+                    color: rgb(255, 183, 213);
+                            &::placeholder{
+                                font-size: 3vh;
+                                color: rgb(255, 183, 213);
+                            }
+                                    &:hover{
+                                        transition: .8s;
+                                        box-shadow: 0px 10px 1px pink;
+                                    }
+                }
+
+                                    #Nombres{
+                                        @include tamañoInput()
+                                    }
+                                    #Edad{
+                                        @include tamañoInput()
+                                    }
+                                    #Email{
+                                        @include tamañoInput()
+                                    }
+                                    #Contraseña{
+                                        @include tamañoInput()
+                                    }
+                                    #Enviar{
+                                        @include tamañoInput()
+                                    }
+}
+
+                label{
+                    padding: 3vh;
+                    color: rgb(255, 183, 213);
+                    text-shadow: 1px 1px 10px white;
+                }
